@@ -13,7 +13,7 @@ Future<FormData> stabilityAiConstructGenerateRequestMessage({
       "height": 576,
       "samples": 1,
       "seed": 0,
-      "step_schedule_start": 08,
+      "step_schedule_start": 0.8,
       "steps": 30,
       "text_prompts": [
         {"text": "blue couch in late victorian style", "weight": 1}

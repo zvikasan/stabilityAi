@@ -19,8 +19,6 @@ enum ApiMapVars {
 class StabilityAiApi {
   static Future<Map<ApiMapVars, dynamic>> generateImage({
     required XFile sourceImage,
-    required String prompt,
-    required CancelToken cancelToken,
   }) async {
     String genImageEndpoint =
         "$stabilityAiApiEndpoint/generation/$currentStabilityAiApiEngine/image-to-image";
@@ -35,9 +33,8 @@ class StabilityAiApi {
           .post(
             genImageEndpoint,
             data: formData,
-            cancelToken: cancelToken,
             options: Options(
-              responseType: ResponseType.bytes,
+              // responseType: ResponseType.bytes,
               headers: {
                 "Content-Type": "multipart/form-data",
                 "Authorization": 'Token $apiKey',
